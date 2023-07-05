@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main {
+    background-image: linear-gradient(to bottom right, rgb(49, 73, 73), rgb(10, 26, 27));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    background-color: rgb(219, 208, 208);
+    height: 40rem;
+    width: 34rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 18px 15px 14px rgba(0, 0, 0, 0.5);
+    transition: width 0.6s ease, height 0.6s ease, box-shadow 0.6s ease, background-color 0.6s ease, margin-left 0.6s ease;
+}
+
+.page:hover {
+    background-color: rgb(230, 217, 217);
+    height: 41rem;
+    width: 35rem;
+    cursor: pointer;
+    box-shadow: 22px 16px 15px rgba(0, 0, 0, 0.5);
+    transition: width 0.6s ease, height 0.6s ease, box-shadow 0.6s ease, background-color 0.6s ease, margin-left 0.6s ease;
+}
+
+.page.hidden {
+    box-shadow: 10px 16px 22px rgba(0, 0, 0, 0.5);
+}
+
+.page.hidden:hover {
+    margin-left: -28rem;
+}
+
+.first{
+    z-index: 3;
+}
+
+.second{
+    height: 39rem;
+    z-index: 2;
+    margin-left: -32rem;
+}
+
+.second:hover{
+    height: 39rem;
+}
+
+.third{
+    height: 38rem;
+    z-index: 1;
+    margin-left: -32rem;
+}
+
+.third:hover{
+    height: 38rem;
+}
