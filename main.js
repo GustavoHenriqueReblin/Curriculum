@@ -1,4 +1,22 @@
 const timeOutStarAnimation = 60000;
+let timeOutbackWelcome;
+
+const applyPhoneMask = (input) => {
+    var valor = input.value.replace(/\D/g, ''); 
+    var formatado = '';
+  
+    if (valor.length > 0) {
+        formatado = '(' + valor.substring(0, 2) + ') ';
+  
+        if (valor.length === 11) {
+            formatado += valor.substring(2, 7) + '-' + valor.substring(7);
+        } else {
+            formatado += valor.substring(2, 6) + '-' + valor.substring(6);
+        }
+    }
+
+    input.value = formatado;
+}
 
 const changeElementClass = (Id, Add, ClassName) => {
     const element = document.getElementById(Id);
@@ -10,9 +28,8 @@ const changeElementClass = (Id, Add, ClassName) => {
 }
 
 const backToWelcome = () => {
-    const link = document.createElement('a');
-    link.href = '#welcome';
-    link.click();
+    const welcomeSection = document.getElementById('welcome');
+    welcomeSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 const hideHeader = () => {
@@ -26,6 +43,10 @@ const hideHeader = () => {
     } else {
         header.classList.add('hidden');
         backWelcome.classList.remove('hidden');
+        clearTimeout(timeOutbackWelcome);
+        timeOutbackWelcome = setTimeout(function() {
+            backWelcome.classList.add('hidden');
+        }, 3000);
     }
 }
 
@@ -44,4 +65,15 @@ const onLoad = () => {
         starContent.appendChild(shootingStarTrail);
         body.appendChild(starContent);
     }, 2500);
+}  
+
+const verifyCursorPosition = (event) => {
+    var XPos = event.clientX;
+    var YPos = event.clientY;
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+
+    if (XPos > screenWidth * 0.8 && YPos > screenHeight * 0.8) {
+        hideHeader();
+    }
 }

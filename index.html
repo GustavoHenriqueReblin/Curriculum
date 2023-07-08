@@ -15,12 +15,12 @@
     <!-- JS -->
     <script src='main.js'></script>
 </head>
-<body id="body" onscroll="hideHeader()" onload="onLoad()">
+<body id="body" onscroll="hideHeader()" onload="onLoad()" onmousemove="verifyCursorPosition(event)">
     <main class="main">
 
         <!-- Botão que retorna à primeira sessão -->
         <div class="container-back-welcome">
-            <button id="back-welcome" class="back-welcome hidden" onclick="() => {backToWelcome()}"> < </button>
+            <button id="back-welcome" class="back-welcome hidden" onclick="backToWelcome()"> < </button>
         </div>
 
         <!-- Cabeçalho com link para todas as sessões -->
@@ -111,7 +111,22 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="contact"></section> -->
+        <section id="contact">
+            <div class="title-content">
+                <h2 class="title">Entre em contato :)</h2>
+            </div>
+            <div class="container-contact">
+                <a class="label-input">E-mail:</a>
+                <input type="text" class="input" maxlength="50" placeholder="Informe seu e-mail"> <br> 
+                <a class="label-input">Nome:</a>
+                <input type="text" class="input" maxlength="50" placeholder="Informe seu nome completo"> <br> 
+                <a class="label-input">Whatsapp:</a>
+                <input type="text" class="input" maxlength="16" placeholder="Informe seu celular" oninput="applyPhoneMask(this)"> <br> 
+                <div class="button-container">
+                    <button class="send-button">Enviar</button>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
