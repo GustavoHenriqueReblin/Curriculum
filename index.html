@@ -7,34 +7,35 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald&family=Poppins:ital,wght@0,200;0,900;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,100&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
 </head>
-<body>
+<body id="body" onscroll="hideHeader()" onload="onLoad()">
     <main class="main">
-        <div class="star-content">
-            <div class="shooting-star"></div>
-            <div class="shooting-star-trail"></div>
-        </div>
-
-        <header class="header">
+        <header id="header" class="header">
             <a class="header-anchor" href="#welcome">Home</a>
-            <a class="header-anchor" href="#about">Sobre</a>
             <a class="header-anchor" href="#schooling">Formação</a>
             <a class="header-anchor" href="#portfolio">Portifólio</a>
             <a class="header-anchor" href="#contact">Contato</a>
         </header>
-        <section id="welcome">
-            <h1 class="title">Olá, me chamo Gustavo Henrique Reblin</h1>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugit veniam voluptatum veritatis deleniti, amet earum quasi hic illo! Repellendus, quia eos! Aperiam ratione </p>
-            <div class="container-next-section">
-                <button class="next-section"> > </button>
+
+        <div id="welcome">
+            <div class="title-content">
+                <h1 class="title">Olá, me chamo Gustavo Henrique Reblin</h1>
             </div>
-        </section>
-        <section id="about"></section>
-        <section id="schooling"></section>
-        <section id="portfolio"></section>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugit veniam voluptatum veritatis deleniti, amet earum quasi hic illo! Repellendus, quia eos! Aperiam ratione </p>
+            <div class="container-back-welcome">
+                <button id="back-welcome" class="back-welcome hidden" onclick="() => {backToWelcome()}"> < </button>
+            </div>
+            <div class="social-medias">
+                <span>a</span>
+                <span>a</span>
+            </div>
+        </div>
+        <section id="schooling"> </section>
+        <!-- <section id="portfolio"></section>
         <section id="contact"></section>
-        <footer class="footer"></footer>
+        <footer class="footer"></footer> -->
     </main>
 </body>
 </html>

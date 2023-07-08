@@ -1,12 +1,36 @@
+/* Estilizações default  para a página */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Neucha', cursive;
+    font-family: 'Archivo', sans-serif;
     user-select: none;
     text-decoration: none;
     color: white;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(32, 32, 32);
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(48, 48, 48); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+/* Layout para qualquer resolução */
 
 .star-content{
     position: absolute;
@@ -20,8 +44,6 @@
     animation-duration: 4s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
-    right: 10px;
-    top: 120px; 
 }
 
 .shooting-star{
@@ -43,24 +65,14 @@
     opacity: 0.2;
 }
 
-@keyframes moveShootingStar {
-    from{
-        right: -200px;
-        top: 120px;
-    }
-    to{
-        right: 1000px;
-        top: -100px;
-    }
-}
-
 .main{
-    height: 100%;
-    width: 100vw;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
-    height: 3rem;
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -68,6 +80,13 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.header.hidden {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
 }
 
 .header-anchor{
@@ -78,64 +97,165 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: medium;
     transition: font-size 0.4s ease;
 }
 
-.header-anchor:hover{
-    font-size: larger;
-    transition: font-size 0.6s ease;
-}
-
 #welcome{
-    height: 40rem;
     width: 100%;
     background-image: url("./img/background-welcome.jpg");
+    background-position: start;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding: 7rem 0 0 0;
 }
 
-.title{
-    font-size: xx-large;
-    margin: 1rem;
-}
-
-.description{
-    width: 24rem;
-    padding-bottom: 16rem;
-}
-
-.container-next-section{
-    height: 4rem;
-    width: 6rem;
+.title-content{
+    height: fit-content;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
-.next-section{
-    width: 40px;
+.description{
+    padding-bottom: 19.5rem;
+}
+
+.social-medias{
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.back-welcome{
     height: 40px;
+    width: 40px;
     background-color: #d3d3d3;
     border-radius: 100%;
     border: none;
     transition: height 0.3s ease, width 0.3s ease, font-size 0.2s ease;
     cursor: pointer;
     color: black;
-    font-size: 20px;
-    padding: 0 0 4px 0;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 0 2px 0;
     rotate: 90deg;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
 }
 
-.next-section:hover{
-    width: 45px;
-    height: 45px;
-    font-size: 25px;
-    transition: height 0.3s ease, width 0.3s ease, font-size 0.2s ease;
-    padding: 0 0 6px 0;
+.back-welcome.hidden{
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-200%);
 }
+
+#schooling{
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+}
+
+/* Layout responsivo */
+
+@media screen and (min-width: 320px) {
+    .header{
+        height: 9rem;
+    }
+
+    .header-anchor{
+        font-size: medium;
+    }
+
+    .title{
+        font-size: x-large;
+    }
+
+    .description{
+        width: 18rem;
+    }
+
+    @keyframes moveShootingStar {
+        from{
+            right: 0;
+            top: 120px;
+        }
+        to{
+            right: 1000px;
+            top: -30px;
+        }
+    }
+
+    #welcome{
+        height: 46rem;
+        padding: 8rem 0 0 0;
+    }
+
+    #schooling{
+        height: 44rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .header{
+        height: 3rem;
+    }
+
+    .header-anchor{
+        font-size: large;
+    }
+
+    .header-anchor:hover{
+        font-size: x-large;
+        transition: font-size 0.6s ease;
+    }
+
+    #welcome{
+        padding: 7rem 0 0 0;
+    }
+
+    .title{
+        font-size: xx-large;
+    }
+
+    .description{
+        width: 24rem;
+    }
+
+    .back-welcome:hover{
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        transition: height 0.3s ease, width 0.3s ease, font-size 0.2s ease;
+        padding: 0 0 4px 0;
+    }
+
+    @keyframes moveShootingStar {
+        from{
+            right: -300px;
+            top: 120px;
+        }
+        to{
+            right: 1000px;
+            top: -30px;
+        }
+    }
+
+    #welcome{
+        height: 42rem;
+    }
+
+    #schooling{
+        height: 40rem;
+    }
+}
+    
