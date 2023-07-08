@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <title>Gustavo - Sobre</title>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo - CV</title>
+    <!-- CSS -->
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 700px)" href="desktop.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 699px)" href="mobile.css">
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,100&display=swap" rel="stylesheet">
+    <!-- JS -->
     <script src='main.js'></script>
 </head>
 <body id="body" onscroll="hideHeader()" onload="onLoad()">
     <main class="main">
+
+        <!-- Botão que retorna à primeira sessão -->
+        <div class="container-back-welcome">
+            <button id="back-welcome" class="back-welcome hidden" onclick="() => {backToWelcome()}"> < </button>
+        </div>
+
+        <!-- Cabeçalho com link para todas as sessões -->
         <header id="header" class="header">
             <a class="header-anchor" href="#welcome">Home</a>
             <a class="header-anchor" href="#schooling">Formação</a>
-            <a class="header-anchor" href="#portfolio">Portifólio</a>
             <a class="header-anchor" href="#contact">Contato</a>
         </header>
 
-        <div id="welcome">
+        <!-- Primeira sessão que mostra o cabeçalho, resumo sobre mim e redes sociais -->
+        <section id="welcome">
             <div class="title-content">
                 <h1 class="title">Olá, me chamo Gustavo Henrique Reblin</h1>
             </div>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugit veniam voluptatum veritatis deleniti, amet earum quasi hic illo! Repellendus, quia eos! Aperiam ratione </p>
-            <div class="container-back-welcome">
-                <button id="back-welcome" class="back-welcome hidden" onclick="() => {backToWelcome()}"> < </button>
-            </div>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugit veniam voluptatum 
+                veritatis deleniti, amet earum quasi hic illo! Repellendus, quia eos! Aperiam ratione 
+            </p>
             <div class="social-medias">
-                <span>a</span>
-                <span>a</span>
+                <div class="content-social-media">
+                    <a id="instagram" href="https://www.instagram.com/ogustavohique/" class="social-media-icon" target="_blank"></a>
+                </div>
+                <div class="content-social-media">
+                    <a id="linkedin" href="https://www.linkedin.com/in/gustavo-hr/" class="social-media-icon" target="_blank"></a>
+                </div>
+                <div class="content-social-media">
+                    <a id="github" href="https://github.com/GustavoHenriqueReblin/" class="social-media-icon" target="_blank"></a>
+                </div>
             </div>
-        </div>
-        <section id="schooling"> </section>
-        <!-- <section id="portfolio"></section>
-        <section id="contact"></section>
-        <footer class="footer"></footer> -->
+        </section>
+
+        <!-- Segunda sessão que mostra uma linha do tempo com minhas formações -->
+        <section id="schooling"> 
+            <div class="title-content">
+                <h2 class="title">Esta é minha formação:</h2>
+            </div>
+            <div class="schooling-container">
+                <div class="schooling-content"
+                    onmouseover="changeElementClass('point-of-first-education', true, 'shining')"
+                    onmouseout="changeElementClass('point-of-first-education', false, 'shining')"
+                >
+                    <div class="years-schooling years-on-top">2000 - 2010</div>
+                    <div class="line-schooling">
+                        <div id="point-of-first-education" class="center-line-schooling"></div>
+                    </div>
+                    <div class="description-schooling description-on-bottom">
+                        <p class="description-schooling-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste ut qui 
+                            tenetur hic aliquid iure, id, dolorum labore aspernatur eveniet voluptatibus, 
+                            doloremque nemo illum repellendus commodi eum eius. Aliquid eveniet rerum 
+                            deleniti magnam excepturi?
+                        </p>
+                    </div>
+                </div>
+                <div class="schooling-content"
+                    onmouseover="changeElementClass('point-of-second-education', true, 'shining')"
+                    onmouseout="changeElementClass('point-of-second-education', false, 'shining')"
+                >
+                    <div class="description-schooling description-on-top">
+                        <p class="description-schooling-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste ut qui 
+                            tenetur hic aliquid iure, id, dolorum labore aspernatur eveniet voluptatibus, 
+                            doloremque nemo illum repellendus commodi eum eius. Aliquid eveniet rerum 
+                            deleniti magnam excepturi?
+                        </p>
+                    </div>
+                    <div class="line-schooling">
+                        <div id="point-of-second-education" class="center-line-schooling"></div>
+                    </div>
+                    <div class="years-schooling years-on-bottom">2018 - 2020</div>
+                </div>
+                <div class="schooling-content"
+                    onmouseover="changeElementClass('point-of-third-education', true, 'shining')"
+                    onmouseout="changeElementClass('point-of-third-education', false, 'shining')"
+                >
+                    <div class="years-schooling years-on-top">2022 - atualmente</div>
+                    <div class="line-schooling">
+                        <div id="point-of-third-education" class="center-line-schooling"></div>
+                    </div>
+                    <div class="description-schooling description-on-bottom">
+                        <p class="description-schooling-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste ut qui 
+                            tenetur hic aliquid iure, id, dolorum labore aspernatur eveniet voluptatibus, 
+                            doloremque nemo illum repellendus commodi eum eius. Aliquid eveniet rerum 
+                            deleniti magnam excepturi?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="contact"></section> -->
     </main>
 </body>
 </html>

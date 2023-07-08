@@ -1,5 +1,20 @@
 const timeOutStarAnimation = 60000;
 
+const changeElementClass = (Id, Add, ClassName) => {
+    const element = document.getElementById(Id);
+    if (Add) {
+        element.classList.add(ClassName);
+    } else {
+        element.classList.remove(ClassName);
+    }
+}
+
+const backToWelcome = () => {
+    const link = document.createElement('a');
+    link.href = '#welcome';
+    link.click();
+}
+
 const hideHeader = () => {
 
     const header = document.getElementById('header');
@@ -12,12 +27,6 @@ const hideHeader = () => {
         header.classList.add('hidden');
         backWelcome.classList.remove('hidden');
     }
-}
-
-const backToWelcome = () => {
-    const link = document.createElement('a');
-    link.href = '#welcome';
-    link.click();
 }
 
 const onLoad = () => {

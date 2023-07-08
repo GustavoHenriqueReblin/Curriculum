@@ -30,111 +30,6 @@ html {
     background: #888; 
 }
 
-/* Layout para qualquer resolução */
-
-.star-content{
-    position: absolute;
-    height: 1px;
-    width: 6rem;
-    rotate: 11deg;
-    display: flex;
-    align-items: center;
-    justify-items: start;
-    animation-name: moveShootingStar;
-    animation-duration: 4s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-}
-
-.shooting-star{
-    height: 1px;
-    width: 3rem;
-    background-image: linear-gradient(to right, rgb(202, 202, 202), rgb(63, 63, 63));
-    box-shadow: 4px 0 30px rgba(255, 255, 255, 1);
-    opacity: 0.6;
-    display: flex;
-    align-items: center;
-    justify-items: start;
-}
-
-.shooting-star-trail{
-    height: 1px;
-    width: 5rem;
-    background-image: linear-gradient(to right, rgb(100, 100, 100), rgb(41, 41, 41));
-    box-shadow: 4px 0 20px rgba(255, 255, 255, 1);
-    opacity: 0.2;
-}
-
-.main{
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.header{
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(0);
-}
-
-.header.hidden {
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
-}
-
-.header-anchor{
-    height: fit-content;
-    width: fit-content;
-    padding: 0 12px 0 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transition: font-size 0.4s ease;
-}
-
-#welcome{
-    width: 100%;
-    background-image: url("./img/background-welcome.jpg");
-    background-position: start;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
-
-.title-content{
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.description{
-    padding-bottom: 19.5rem;
-}
-
-.social-medias{
-    height: 100%;
-    width: 100%;
-    padding: 0 2rem 4rem 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-}
-
 .back-welcome{
     height: 40px;
     width: 40px;
@@ -155,107 +50,18 @@ html {
     bottom: 2rem;
 }
 
+.back-welcome:hover{
+    width: 45px;
+    height: 45px;
+    font-size: 15px;
+    transition: height 0.3s ease, width 0.3s ease, font-size 0.2s ease, right 0.2s ease, bottom 0.2s ease;
+    padding: 0 0 4px 0;
+    right: 1.8rem;
+    bottom: 1.9rem;
+}
+
 .back-welcome.hidden{
     transition: transform 0.5s ease-in-out;
     transform: translateY(-200%);
-}
-
-#schooling{
-    width: 100%;
-    background-color: rgb(32, 32, 32);
-}
-
-/* Layout responsivo */
-
-@media screen and (min-width: 320px) {
-    .header{
-        height: 9rem;
-    }
-
-    .header-anchor{
-        font-size: medium;
-    }
-
-    .title{
-        font-size: x-large;
-    }
-
-    .description{
-        width: 18rem;
-    }
-
-    @keyframes moveShootingStar {
-        from{
-            right: 0;
-            top: 120px;
-        }
-        to{
-            right: 1000px;
-            top: -30px;
-        }
-    }
-
-    #welcome{
-        height: 46rem;
-        padding: 8rem 0 0 0;
-    }
-
-    #schooling{
-        height: 44rem;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    .header{
-        height: 3rem;
-    }
-
-    .header-anchor{
-        font-size: large;
-    }
-
-    .header-anchor:hover{
-        font-size: x-large;
-        transition: font-size 0.6s ease;
-    }
-
-    #welcome{
-        padding: 7rem 0 0 0;
-    }
-
-    .title{
-        font-size: xx-large;
-    }
-
-    .description{
-        width: 24rem;
-    }
-
-    .back-welcome:hover{
-        width: 45px;
-        height: 45px;
-        font-size: 15px;
-        transition: height 0.3s ease, width 0.3s ease, font-size 0.2s ease;
-        padding: 0 0 4px 0;
-    }
-
-    @keyframes moveShootingStar {
-        from{
-            right: -300px;
-            top: 120px;
-        }
-        to{
-            right: 1000px;
-            top: -30px;
-        }
-    }
-
-    #welcome{
-        height: 42rem;
-    }
-
-    #schooling{
-        height: 40rem;
-    }
 }
     
