@@ -93,8 +93,10 @@
 }
 
 .description{
+    line-height: 1.2;
+    text-align: center;
     width: 18rem;
-    padding-bottom: 19.5rem;
+    padding-bottom: 16rem;
 }
 
 .social-medias{
@@ -162,8 +164,9 @@
 }
 
 #schooling{
+    height: 54rem;
     width: 100%;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(53, 53, 53);
     display: flex;
     flex-direction: column;
 }
@@ -187,10 +190,6 @@
         right: 1000px;
         top: -30px;
     }
-}
-
-#schooling{
-    height: 54rem;
 }
 
 .schooling-container{
@@ -276,7 +275,7 @@
     height: 42rem;
     width: 100%;
     padding: 0 6rem 0 6rem;
-    background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(0, 0, 0));
+    background-image: linear-gradient(to bottom, rgb(26, 26, 26), rgb(10, 10, 10));
 }
 
 .container-contact{

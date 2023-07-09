@@ -98,7 +98,9 @@
 }
 
 .description{
-    padding-bottom: 19.5rem;
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 16rem;
     width: 24rem;
 }
 
@@ -169,7 +171,7 @@
 #schooling{
     height: 42rem;
     width: 100%;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(53, 53, 53);
     display: flex;
     flex-direction: column;
 }
@@ -264,13 +266,14 @@
 .description-schooling-content{
     width: 70%;
     font-size: medium;
+    text-align: center;
 }
 
 #contact{
-    height: 42rem;
+    height: 36rem;
     width: 100%;
     padding: 0 20rem 0 20rem;
-    background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(0, 0, 0));
+    background-image: linear-gradient(to bottom, rgb(26, 26, 26), rgb(10, 10, 10));
 }
 
 .container-contact{
@@ -323,4 +326,151 @@
     transition: height 0.2s ease, width 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
     background-color: rgb(20, 20, 20);
+}
+
+#skills{
+    height: 42rem;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem 4rem 2rem 4rem;
+}
+
+.skills-container{
+    height: 100%;
+    width: 32rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-content{
+    height: 100%;
+    width: 100%;
+}
+
+.container-ability-gif{
+    height: 10rem;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 2rem 0 4rem;
+}
+
+.ability-title{
+    margin-top: 2rem;
+}
+
+.ability-gif{
+    height: 80%;
+    width: 30%;
+    border-radius: 100%;
+    background-image: url('./img/ability.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 8rem;
+}
+
+.list-skills{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 4rem 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.skill-row{
+    margin: 30px 0;
+    cursor: pointer;
+    font-size: medium;
+    transition: font-size 0.2s ease, margin 0.1s ease;
+}
+
+.skill-row:hover{
+    transition: font-size 0.2s ease, margin 0.1s ease;
+    font-size: large;
+    margin: 28px 0;
+}
+
+.line-space{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.applicable-skills-container{
+    height: 100%;
+    width: 50rem;
+    padding: 8rem 0 1rem 0;
+    background-color: rgba(225,95,45,255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.applicable-skills-content{
+    height: 6rem;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    transition: height 0.2s ease, width 0.1s ease;
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.applicable-skills-content:hover{
+    height: 7rem;
+    width: 100%;
+    transition: height 0.2s ease, width 0.1s ease;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.name-applicable-skill{
+    height: 80%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.percent-applicable-skill{
+    height: 80%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-percent-value{
+    height: 40%;
+    width: 92%;
+    display: flex;align-items: center;
+    justify-content: end;
+    padding: 0 2rem 0 0;
+}
+
+.container-percent-bar{
+    height: 60%;
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.full-percent-bar{
+    height: 12px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.empty-percent-bar{
+    height: 12px;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(196, 196, 196);
 }
