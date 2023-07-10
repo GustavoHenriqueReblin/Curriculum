@@ -329,3 +329,145 @@
     cursor: pointer;
     background-color: rgb(20, 20, 20);
 }
+
+#skills{
+    height: 42rem;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.skills-container{
+    height: 100%;
+    width: 11rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-content{
+    height: 100%;
+    width: 100%;
+}
+
+.container-ability-gif{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 2rem 0 1.5rem;
+}
+
+.ability-title{
+    margin-top: 2rem;
+}
+
+.ability-gif{
+    height: 80%;
+    width: 30%;
+    border-radius: 100%;
+    background-image: url('./img/ability.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 8rem;
+}
+
+.list-skills{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.skill-row{
+    width: 80%;
+    margin: 30px 0;
+    cursor: pointer;
+    font-size: medium;
+    transition: font-size 0.2s ease, margin 0.1s ease;
+}
+
+.skill-row:hover{
+    transition: font-size 0.2s ease, margin 0.1s ease;
+    font-size: large;
+    margin: 28px 0;
+}
+
+.line-space{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.applicable-skills-container{
+    height: 100%;
+    width: 50rem;
+    padding: 8rem 0 1rem 0;
+    background-color: rgba(225,95,45,255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.applicable-skills-content{
+    height: 6rem;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    transition: height 0.2s ease, width 0.1s ease;
+    background-color: rgb(255, 255, 255, 0);
+    margin: 0 10px 0 10px;
+}
+
+.name-applicable-skill{
+    height: 40%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.percent-applicable-skill{
+    height: 40%;
+    width: 40%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.container-percent-value{
+    height: 40%;
+    width: 90%;
+    display: flex;align-items: center;
+    justify-content: end;
+    padding: 0 2rem 0 0;
+}
+
+.container-percent-bar{
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.full-percent-bar{
+    height: 12px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.empty-percent-bar{
+    height: 12px;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(196, 196, 196);
+}
