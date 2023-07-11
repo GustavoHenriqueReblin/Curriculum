@@ -89,7 +89,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 4rem 1rem 2rem 1rem;
 }
 
 .description{
@@ -269,6 +269,7 @@
 
 .description-schooling-content{
     font-size: medium;
+    line-height: 1.5;
 }
 
 #contact{
@@ -427,37 +428,42 @@
 
 .name-applicable-skill{
     height: 40%;
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     cursor: pointer;
+    padding: 0 0 0 2rem;
+    margin: 0 4rem 0 0;
 }
 
 .percent-applicable-skill{
-    height: 40%;
-    width: 40%;
+    height: 80%;
+    width: 20%;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
-/*.container-percent-value{
+.container-percent-value{
     height: 40%;
-    width: 90%;
+    width: 10%;
     display: flex;align-items: center;
     justify-content: end;
-    padding: 0 2rem 0 0;
+    padding: 1.4rem 0 0 0;
 }
 
 .container-percent-bar{
     height: 60%;
-    width: 80%;
+    width: 400%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    padding: 1.5rem 2rem 0 0;
+    margin-left: -9rem;
 }
 
 .full-percent-bar{
@@ -470,4 +476,4 @@
     height: 12px;
     border-radius: 0 10px 10px 0;
     background-color: rgb(196, 196, 196);
-}
+} 
